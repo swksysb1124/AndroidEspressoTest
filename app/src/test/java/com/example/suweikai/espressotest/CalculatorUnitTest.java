@@ -1,5 +1,6 @@
 package com.example.suweikai.espressotest;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -9,9 +10,17 @@ import static org.junit.Assert.*;
  *
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
-public class ExampleUnitTest {
+public class CalculatorUnitTest {
+
+    private Calculator calculator;
+
+    @Before
+    public void init() {
+        calculator = new Calculator();
+    }
+
     @Test
-    public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+    public void add() {
+        assertEquals(4+5+3, calculator.add(4, 5, 3));
     }
 }

@@ -40,5 +40,10 @@ public class ChildActivity extends AppCompatActivity {
             Toast.makeText(this, input, Toast.LENGTH_SHORT).show();
         }
         edtInput.setText("");
+        test();
+    }
+
+    private void test() {
+
     }
 }

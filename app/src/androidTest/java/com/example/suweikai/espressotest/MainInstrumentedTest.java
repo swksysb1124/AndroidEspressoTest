@@ -15,6 +15,8 @@ import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.clearText;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.closeSoftKeyboard;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isEnabled;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 
 /**
@@ -78,5 +80,6 @@ public class MainInstrumentedTest {
         onView(withId(R.id.editTextUserInput)).perform(ViewActions.typeText("AAAAA"), closeSoftKeyboard());
         rest();
         onView(withId(R.id.btn_back)).perform(click());
+        onView(withId(R.id.btn_next)).check(matches(isEnabled()));
     }
 }
